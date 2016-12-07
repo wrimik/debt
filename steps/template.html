@@ -1,0 +1,20 @@
+<div class="step"
+     ng-show="ui.step == step || ui.step+1 == step"
+     ng-class="{
+        'animated fadeInRight': ui.step == step,
+        'animated fadeOutLeft': ui.step+1 == step
+    }">
+    <h2 class="text-center">
+        {! title !} <br>
+        <small>{! subtitle !}</small>
+    </h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div ng-transclude></div>
+                <div ng-click="ui.step = ui.step-1" class="btn btn-default btn-lg pull-left">PREV</div>
+                <div ng-click="ui.step = ui.step+1" class="btn btn-primary btn-lg pull-right">NEXT</div>
+            </div>
+        </div>
+    </div>
+</div>
