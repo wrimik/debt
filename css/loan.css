@@ -1,17 +1,24 @@
 section{
     padding:70px 0;
 }
+nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0 16px;
+}
 #jumbo-image{
     background-size:cover;
     min-height:640px;
+    overflow-x:hidden;
 }
 .step{ color:#fff; }
 h1, h2 > small { color:#fff; text-shadow: 1px 1px 2px #000; }
 .panel-default{
     background-color:rgba(0,0,0,.5)
 }
+.panel-body{
+    padding:40px 20px;
+}
 form-screen{
-    position:absolute;
     min-width:100%;
     max-width:1000px;
     z-index: 100;

@@ -1,8 +1,7 @@
 <div class="step"
-     ng-show="ui.step == step || ui.step+1 == step"
+     ng-show="ui.step == step "
      ng-class="{
-        'animated fadeInRight': ui.step == step,
-        'animated fadeOutLeft': ui.step+1 == step
+        'animated fadeInRight': ui.step == step
     }">
     <h2 class="text-center">
         {! title !} <br>
@@ -10,10 +9,23 @@
     </h2>
     <div class="panel panel-default">
         <div class="panel-body">
-            <div class="col-xs-8 col-xs-offset-2">
+            <div class="col-sm-8 col-sm-offset-2 col-xs-12">
                 <div ng-transclude></div>
-                <div ng-click="ui.step = ui.step-1" class="btn btn-default btn-lg pull-left">PREV</div>
-                <div ng-click="ui.step = ui.step+1" class="btn btn-primary btn-lg pull-right">NEXT</div>
+                <div ng-click="ui.step = ui.step - 1" class="btn btn-default btn-lg pull-left">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+                <div ng-click="ui.next()"
+                     ng-show="ui.step != 8"
+                     class="btn btn-primary btn-lg pull-right">
+                    <i class="fa fa-arrow-right"></i>
+                    CONTINUE
+                </div>
+                <button ng-show="ui.step == 8"
+                        type="submit"
+                        class="btn btn-primary btn-lg pull-right">
+                    <i class="fa fa-arrow-right"></i>
+                    CONTINUE
+                </button>
             </div>
         </div>
     </div>
