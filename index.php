@@ -2,7 +2,7 @@
 <html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Lorem Ipsum</title>
+    <title>Loan Solutions Today</title>
     <!--  AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
 
